@@ -1,10 +1,13 @@
 package com.example.internal_files;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -79,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (FileNotFoundException e) {
             Write_text("");
         }
-
         InputStreamReader iSR = new InputStreamReader(fIS);
         BufferedReader bR = new BufferedReader(iSR);
         StringBuilder sB = new StringBuilder();
@@ -145,8 +147,27 @@ public class MainActivity extends AppCompatActivity {
      *     the function will transfer the user to the credits screen
      * </>
      */
-    public void creditsPressed(View view) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    /**
+     * <p
+     *      the function get a variable of MenuItem type
+     * </>
+     * @return the function will as the user choice will move to the credits screen or close the menu
+     */
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
         Intent si = new Intent(this, credits.class);
-        startActivity(si);
+        String st = item.getTitle().toString();
+        if(st.equals("replace screen")){
+            startActivity(si);
+        }
+        else{
+            closeOptionsMenu();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

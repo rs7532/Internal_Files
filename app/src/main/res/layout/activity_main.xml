@@ -155,34 +155,4 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="234dp">
-
-        <Space
-            android:layout_width="580dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="680dp" />
-
-            <Button
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:onClick="creditsPressed"
-                android:text="credits" />
-        </LinearLayout>
-    </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

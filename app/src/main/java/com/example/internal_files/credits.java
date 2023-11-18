@@ -42,7 +42,7 @@ public class credits extends AppCompatActivity {
      */
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
         String st = item.getTitle().toString();
-        if(st.equals("main screen")){
+        if(st.equals("replace screen")){
             finish();
         }
         else{
