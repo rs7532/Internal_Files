@@ -108,9 +108,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void savePressed(View view) {
         // READ:
-        System.out.println("haven't got the massage!");
         String fileString = Read_text();
-        System.out.println("got the massage!");
         // WRITE:
         Write_text(String.valueOf(fileString));
         tv.setText(fileString);
